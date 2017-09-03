@@ -1,22 +1,4 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>JogoJS</title>
-	<style>
-		canvas{
-			position: absolute;
-			top: 0px;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-			margin: auto;
-		}
-	</style>
-</head>
-<body>
-	<script>
-		//variaveis do jogo
+//variaveis do jogo
 		//altrura e largura serão usadas para pegar a janela do usuário
 		//os frames serão constantementes atualizados
 		var canvas, ctx, ALTURA, LARGURA,frames=0,maxPulos=3,
@@ -119,9 +101,3 @@
 
 		//inicia o jogo
 		main();
-	</script>
-
-</body>
-
-
-</html>
