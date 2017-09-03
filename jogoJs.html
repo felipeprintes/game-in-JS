@@ -19,7 +19,7 @@
 		//variaveis do jogo
 		//altrura e largura serão usadas para pegar a janela do usuário
 		//os frames serão constantementes atualizados
-		var canvas, ctx, ALTURA, LARGURA,frames=0,
+		var canvas, ctx, ALTURA, LARGURA,frames=0,maxPulos=3,
 		
 		chao = {
 			y:550,
@@ -41,6 +41,7 @@
 			gravidade:1.5,
 			velocidade:0,
 			forcaPulo: 15,
+			qtdPulo:0,
 
 			atualiza:function(){
 				this.velocidade+=this.gravidade;
@@ -48,6 +49,7 @@
 
 				if(this.y>chao.y-this.altura){
 					this.y = chao.y - this.altura;
+					this.qtdPulo=0;
 				}
 			},
 
@@ -57,7 +59,11 @@
 			},
 
 			pulo: function(){
-				this.velocidade = -this.forcaPulo;
+				if(this.qtdPulo<maxPulos){
+					this.velocidade = -this.forcaPulo;
+					this.qtdPulo++;
+				}
+				
 			}
 		};
 
